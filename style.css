@@ -1,0 +1,601 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: hwb(0 0% 100%);
+    color: #333;
+}
+
+/* Header styles */
+header {
+    background: linear-gradient(120deg, rgb(119, 0, 255), rgb(60, 2, 94));
+    background-size: 200% 200%;
+    animation: gradientAnimation 5s ease infinite;
+    padding: 10px;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Gradient Animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+header .header-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+header .logo img {
+    height: 120px;
+    width: auto;
+    margin-left: 10px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    text-align: center;
+    flex: 1; /* Center align with flexbox */
+}
+
+.hero {
+    width: 100%;
+    height: 800px;
+
+}
+
+.banner {
+    width: 1600px;
+    height: 600px;
+
+}
+
+.banner-container {
+    position: relative;
+    width: 100%;
+    max-height: 800px; 
+    overflow: hidden;
+}
+
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 10px 20px;
+    border-radius: 5px; 
+}
+
+
+
+
+/* Auth Buttons */
+.auth-buttons {
+    display: flex;
+    gap: 20px;
+    margin-right: 50px;
+}
+
+.auth-buttons .btn {
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.auth-buttons .btn:hover {
+    background-color: white;
+    color: #ff0088;
+}
+
+.auth-buttons .signup-btn {
+    background-color: #ff0088;
+    color: white;
+    border: none;
+}
+
+.auth-buttons .signup-btn:hover {
+    background-color: #000000;
+    color: white;
+}
+
+
+/* Navigation bar styles */
+nav ul {
+    background-color: #000000;
+    padding: 20px 0; 
+    margin: 60px 0 0 0;
+    display: flex; /* Flexbox for inline layout not using br */
+    justify-content: center; 
+    list-style-type: none; /* Remove bullet points! */
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+
+
+}
+
+nav ul li {
+    margin: 0 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px; 
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #ff0088;
+    padding: 20px;
+}
+
+main {
+    margin-top: 80px; 
+    padding: 20px;
+}
+
+/* Section styles */
+section {
+    padding: 60px;
+    margin: 20px auto;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 8px;
+    max-width: 1200px; 
+}
+
+/* Button styles */
+button {
+    background-color: #ff0088;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #000000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Footer styles */
+.footer-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+.footer-logo img {
+    width: 120px;
+}
+
+.footer-social {
+    margin: 15px 0;
+}
+
+.footer-social a {
+    color: #fff;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #ff69b4; 
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #ff69b4; 
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+
+/* Form styling */
+#resourceForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#resourceForm label {
+    font-weight: bold;
+}
+
+#resourceForm input, #resourceForm select, #resourceForm textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+#resourceForm button {
+    align-self: flex-start;
+    background-color: #ff0088;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#resourceForm button:hover {
+    background-color: #000000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.edit-btn {
+    background-color: #ffffff;
+    color: #ff0088;
+    border: 1px solid #ff0088;
+
+}
+
+
+.edit-btn:hover {
+    background-color: #ff0088;
+    color: #ffffff;
+
+}
+
+
+.delete-btn {
+    background-color: #ff0000;
+    color: #ffffff;
+    border: 1px solid #ff0000;
+
+
+}
+
+
+.delete-btn:hover {
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #000000;
+
+}
+
+
+/* Table styling */
+#resourceTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#resourceTable th, #resourceTable td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#resourceTable th {
+    background-color: #333;
+    color: white;
+}
+
+#resourceTable tr:hover {
+    background-color: #f4f4f4;
+}
+
+
+
+/* Contact Form Styling */
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    background-color: #f4f4f4;
+    padding: 50px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contactForm label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#contactForm input, #contactForm textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+#contactForm textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+
+
+
+/* Comments Section */
+#commentForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 20px 0;
+}
+
+#commentForm label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+#commentForm input, #commentForm textarea {
+    padding: 10px;
+    font-size: 16px;
+     margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+
+
+.comments ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.comments ul li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+}
+
+/* For funsies */
+.view-details-btn {
+    color: #000000;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 5px;
+    transition: background-color 0.3s, color 0.3s;
+
+}
+
+.view-details-btn i {
+    margin-right: 8px; 
+}
+
+.view-details-btn:hover {
+    color: #ff0088;
+}
+
+
+/* Styling for Kudos button */
+.kudos-btn {
+    background-color: #000000;
+    color: white;
+    padding: 8px 15px ;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
+.kudos-btn i {
+    margin-right: 5px; 
+}
+
+.kudos-btn:hover {
+    background-image: linear-gradient(to bottom right, rgb(119, 0, 255), rgb(60, 2, 94));
+    
+}
+
+.kudos-btn:focus {
+    outline: none;
+}
+
+
+
+
+/* Responsive styles */
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Responsive Header */
+@media (max-width: 768px) {
+    header .logo img {
+        height: 80px;
+        margin-left: 5px;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    .auth-buttons {
+        flex-direction: column;
+        gap: 10px;
+        margin-right: 10px;
+    }
+}
+
+/* Responsive Navigation (At least I'm trying, had to make a couple of divs) */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; 
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    nav ul li a {
+        padding: 10px 15px;
+    }
+}
+
+/* Hero */
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+    }
+
+    .banner {
+        width: 100%;
+        height: auto;
+    }
+
+    .banner-text {
+        font-size: 1.5rem;
+        padding: 8px 15px;
+    }
+}
+
+/* Sections */
+@media (max-width: 768px) {
+    section {
+        padding: 20px;
+        margin: 10px auto;
+    }
+}
+
+/* Forms */
+@media (max-width: 768px) {
+    #resourceForm, #contactForm, #commentForm {
+        padding: 15px;
+        gap: 10px;
+    }
+}
+
+/* Footer */
+@media (max-width: 768px) {
+    .footer-container {
+        padding: 15px;
+    }
+
+    .footer-social a {
+        font-size: 20px;
+        margin: 0 5px;
+    }
+}
+
+/* Buttons */
+@media (max-width: 768px) {
+    button {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .auth-buttons .btn, .kudos-btn {
+        font-size: 14px;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto; /* Center the image */
+}
+
+/* Table */
+@media (max-width: 768px) {
+    #resourceTable {
+        font-size: 14px;
+    }
+
+    #resourceTable th, #resourceTable td {
+        padding: 5px;
+    }
+}
+
+
+/* Responsive Iframes */
+.iframe-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    margin: 20px 0;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
